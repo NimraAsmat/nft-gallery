@@ -1,0 +1,382 @@
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.app {
+  width: 100%;
+  max-width: 1480px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.app.dark {
+  background: black;
+  color: #f9fafb;
+}
+
+.app.dark .nft-card {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+.app.dark .controls select,
+.app.dark .controls input {
+  background: #1f2937;
+  color: #f9fafb;
+  border: 1px solid #374151;
+}
+
+.app.dark .favorite-btn,
+.app.dark .modal-favorite-btn {
+  background: #ef4444;
+}
+
+.app.dark .buy-btn,
+.app.dark .modal-buy-btn {
+  background: #22c55e;
+}
+
+
+.app-title {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.app.dark .app-title {
+  color: #f9fafb;
+}
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+
+.toggle-btn {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.empty-state {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+
+.nft-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nft-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.nft-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.nft-title {
+  font-size: 1.3rem;
+  margin: 14px 0 6px;
+}
+
+.nft-artist {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.nft-price {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+
+.nft-card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.favorite-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.favorite-btn:hover {
+  background: #1d4ed8;
+}
+
+
+.buy-btn {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.buy-btn:hover {
+  background: #16a34a;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease;
+  position: relative;
+}
+
+.app.dark .modal-content {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+
+.modal-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+
+.modal-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.modal-artist,
+.modal-price,
+.modal-description {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #374151;
+}
+
+.app.dark .modal-artist,
+.app.dark .modal-price,
+.app.dark .modal-description {
+  color: #d1d5db;
+}
+
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.modal-favorite-btn {
+  background: #2563eb !important;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.modal-favorite-btn:hover {
+  background: #1d4ed8;
+}
+
+.modal-buy-btn {
+  background: #22c55e !important;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.modal-buy-btn:hover {
+  background: #16a34a;
+}
+
+
+.modal-close {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #1d4ed8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .controls input,
+  .controls select,
+  .controls button {
+    min-width: 140px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .app-title {
+    font-size: 1.6rem;
+  }
+
+  .nft-card {
+    padding: 16px;
+  }
+
+  .nft-title {
+    font-size: 1.1rem;
+  }
+
+  .nft-artist {
+    font-size: 0.9rem;
+  }
+
+  .nft-price {
+    font-size: 0.95rem;
+  }
+
+  .controls input,
+  .controls select,
+  .controls button {
+    min-width: 100%;
+    padding: 8px 10px;
+  }
+
+  .toggle-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+}
+
+
