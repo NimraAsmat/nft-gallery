@@ -1,12 +1,65 @@
-# React + Vite
+#  NFT Gallery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **NFT Gallery App** is a modern React application that allows users to explore, search, filter, and sort NFTs.  
+Users can mark favorites, view detailed NFT information in a modal, and add items to their cart.  
+The app also supports **dark/light mode** and is fully responsive for desktop, tablet, and mobile screens.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
+-  Browse NFTs in a responsive grid layout  
+-  Search NFTs by name  
+-  Filter by artist  
+-  Sort by price (Low → High / High → Low)  
+- View NFT details in a modal  
+-  Add/Remove favorites  
+-  Add NFTs to cart (with alert message)  
+-  Dark/Light mode toggle  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+- **React**  
+- **CSS** (responsive, dark mode, animations)  
+
+---
+
+## Project Structure
+```
+nft-gallery/
+│── src/
+│   ├── components/
+│   │   ├── Gallery.js      # NFT gallery grid
+│   │   ├── NFTCard.js      # Individual NFT card
+│   │   ├── Details.js      # Modal for details
+│   ├── data.js             # NFT dataset
+│   ├── App.js              # Main logic & state
+│   ├── App.css             # Styling
+│── README.md               # Documentation
+```
+
+---
+
+##  Usage
+1. Clone the repository  
+   ```bash
+   git clone <YOUR-REPO-URL>
+   cd nft-gallery
+   ```
+2. Install dependencies  
+   ```bash
+   npm install
+   ```
+3. Run the development server  
+   ```bash
+   npm start
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.  
+
+---
+
+## License
+This project is open source and available under the **MIT License**.  
+
+---
+ *Enjoy exploring NFTs with a clean and modern interface!*  
