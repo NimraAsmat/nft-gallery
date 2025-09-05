@@ -43,7 +43,7 @@ nft-gallery/
 ##  Usage
 1. Clone the repository  
    ```bash
-   git clone <YOUR-REPO-URL>
+   git clone https://github.com/NimraAsmat/nft-gallery.git
    cd nft-gallery
    ```
 2. Install dependencies  
